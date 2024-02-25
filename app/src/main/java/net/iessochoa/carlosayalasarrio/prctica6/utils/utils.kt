@@ -5,8 +5,7 @@ import com.bumptech.glide.Glide
 import net.iessochoa.carlosayalasarrio.prctica6.R
 
 fun cargaImagen(ivImagen: ImageView, uri:String) {
-    Glide
-        .with(ivImagen.getContext())
+    Glide.with(ivImagen.getContext())
         //url de la imagen
         .load(uri)
         //centramos la imagen
