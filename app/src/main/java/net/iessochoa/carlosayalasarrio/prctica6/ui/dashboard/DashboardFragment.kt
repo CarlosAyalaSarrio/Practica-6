@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import net.iessochoa.carlosayalasarrio.prctica6.databinding.FragmentDashboardBinding
+import net.iessochoa.carlosayalasarrio.prctica6.ui.home.HomeViewModel
 
 class DashboardFragment : Fragment() {
 
@@ -16,6 +17,7 @@ class DashboardFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    lateinit var  dashboardFragment: DashboardViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,
