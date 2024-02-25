@@ -30,9 +30,14 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
         val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        homeViewModel.personajesLiveData
+            .observe(viewLifecycleOwner) {
+                val text=StringBuilder()
+                //it es la lista de personajes actualizada
+                for(personaje in it)
+                    text.append(personaje.name).append("\n")
+                textView.text = text
+            }
         return root
     }
 
